@@ -35,7 +35,7 @@ No GUI -- this is a classic console app.
 
 ## Use
 
-The executables for MacOS and Windows are in their respectively named folders. Simply download the correct one for your operating system and run it.
+The executables for MacOS and Windows are in their respectively named folders. Simply download the correct one for your operating system. For MacOS, the executable is compressed in a zip file to preserve it's identity as an Unix executable otherwise GitHub breaks it. Just unzip it after downloading to run. For Windows, the .exe file is ready to go. 
 
 You can also download this project and build it yourself.
 
