@@ -47,4 +47,3 @@ The **emaths.h** function header file may also be used/tweaked to expand on this
 
 This project is free to use, modify, copy, share, or whatever else you want to do with it under the terms of the MIT license. See "License" for details.
 
-Copyright (c) 2024 Maximilian Landau
