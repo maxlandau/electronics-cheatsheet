@@ -3,6 +3,12 @@
 #include <ctype.h>
 #include "emaths.h"
 
+#ifdef _WIN32
+#define CLEAR "cls"
+#else
+#define CLEAR "clear"
+#endif
+
 void displayOptions();
 void handleInput(char input);
 
@@ -24,7 +30,7 @@ int main()
         getchar(); 
         input = getchar();
         if(input == 'x') programShouldEnd = 1;
-            else system("clear");
+            else system(CLEAR);
         
     }while(programShouldEnd == 0);
 }
