@@ -268,7 +268,7 @@ float getResValueInOhms(char* c){
     return atof(beforeBuffer) * multiplier + (atof(afterBuffer) * multiplier/afterChar); 
 }
 
-char* getRKMfromFarads(long double c){
+char* getValFromFarads(long double c){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -303,7 +303,7 @@ char* getRKMfromFarads(long double c){
     return output;  
 }
 
-char* getRKMfromOhms(float r){
+char* getValFromOhms(float r){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -334,7 +334,7 @@ char* getRKMfromOhms(float r){
     return output;
 }
 
-char* getRKMfromHenries(long double l){
+char* getValFromHenries(long double l){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -374,7 +374,7 @@ char* getRKMfromHenries(long double l){
     return output;  
 }
 
-char* getRKMfromAmps(long double i){
+char* getValFromAmps(long double i){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -410,7 +410,7 @@ char* getRKMfromAmps(long double i){
     return output;  
 }
 
-char* getRKMfromVolts(float v){
+char* getValFromVolts(float v){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -443,7 +443,7 @@ char* getRKMfromVolts(float v){
     return output;  
 }
 
-char* getRKMfromFreq(float f){
+char* getValFromFreq(float f){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -474,7 +474,7 @@ char* getRKMfromFreq(float f){
     return output;
 }
 
-char* getRKMfromSeconds(float s){
+char* getValFromSeconds(float s){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;
@@ -511,7 +511,7 @@ char* getRKMfromSeconds(float s){
     return output;  
 }
 
-char* getRKMfromWatts(float w){
+char* getValFromWatts(float w){
     char* output = (char*)malloc(20 * sizeof(char));
     if(output == NULL)
         return NULL;

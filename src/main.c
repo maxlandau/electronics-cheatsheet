@@ -54,7 +54,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     r = getResValueInOhms(buffer);
                     float num = VfromRI(r, current);
-                    o = getRKMfromVolts(VfromRI(r, current));
+                    o = getValFromVolts(VfromRI(r, current));
                     printf("\nVoltage: %s\n",o);
                     free(o);
                     break;
@@ -65,7 +65,7 @@ void handleInput(char input){
                     printf("\nEnter current:\n");
                     scanf("%s", buffer);
                     current = getCurrentInAmps(buffer);
-                    o = getRKMfromOhms(RfromVI(v, current));
+                    o = getValFromOhms(RfromVI(v, current));
                     printf("\nResistance: %s",o);
                     free(o);
                     break;
@@ -76,7 +76,7 @@ void handleInput(char input){
                     printf("\nEnter resistance:\n");
                     scanf("%s", buffer);
                     r = getResValueInOhms(buffer);
-                    o = getRKMfromAmps(IfromVR(v, r));
+                    o = getValFromAmps(IfromVR(v, r));
                     printf("\nCurrent: %s",o);
                     free(o);
                     break;
@@ -99,7 +99,7 @@ void handleInput(char input){
             scanf("%s", buffer);
             r2 = getResValueInOhms(buffer);
             output = parallelR(r1,r2);
-            char* rP = getRKMfromOhms(output);
+            char* rP = getValFromOhms(output);
             printf("\nR1 and R2 in parallel are equivalent to %s\n", rP);
             free(rP);
             break;
@@ -111,7 +111,7 @@ void handleInput(char input){
             scanf("%s", buffer);
             float c2 = getCapValueInFarads(buffer);
             output = seriesC(c1, c2);
-            char* cP = getRKMfromFarads(output);
+            char* cP = getValFromFarads(output);
             printf("\nC1 and C2 in series are equivalent to %s\n", cP);
             free(cP);
             break;
@@ -152,7 +152,7 @@ void handleInput(char input){
                     r1 = 0;
                     break;
             }
-            o = getRKMfromFreq(output);
+            o = getValFromFreq(output);
             printf("\nCutoff frequency is %s\n", o);
             free(o);
             break;
@@ -165,8 +165,8 @@ void handleInput(char input){
             r1 = getResValueInOhms(buffer);
             output = totalChargeTime(c1,r1);
             float timeConstant = c1 * r1;
-            char* tc = getRKMfromSeconds(timeConstant);
-            o = getRKMfromSeconds(output);
+            char* tc = getValFromSeconds(timeConstant);
+            o = getValFromSeconds(output);
             printf("\nTime constant is: %s\nTotal charge time is %s\n", tc, o);
             free(o);
             free(tc);
@@ -184,7 +184,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     current = getCurrentInAmps(buffer);
                     output = powerDissipation(v, current);
-                    o = getRKMfromWatts(output);
+                    o = getValFromWatts(output);
                     printf("\nTotal power is: %s", o);
                     free(o);
                     break;
@@ -196,7 +196,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     r = getResValueInOhms(buffer);
                     output = powerDissipationTwo(r, current);
-                    o = getRKMfromWatts(output);
+                    o = getValFromWatts(output);
                     printf("\nPower dissipation is: %s", o);
                     free(o);
                     break;
@@ -213,7 +213,7 @@ void handleInput(char input){
             scanf("%s", buffer);
             r2 = getResValueInOhms(buffer);
             output = voltageDivider(r1 ,r2, v);
-            o = getRKMfromVolts(output);
+            o = getValFromVolts(output);
             printf("\nOutput voltage is %s\n", o);
             free(o);
             break;
@@ -227,7 +227,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     v = getVoltageInVolts(buffer);
                     output = ACrmstoDC(v);
-                    o = getRKMfromVolts(output);
+                    o = getValFromVolts(output);
                     printf("\nEquivalent DC voltage is %s\n", o);
                     free(o);
                     break;
@@ -236,7 +236,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     v = getVoltageInVolts(buffer);
                     output = DCtoACrms(v);
-                    o = getRKMfromVolts(output);
+                    o = getValFromVolts(output);
                     printf("\nEquivalent AC voltage is %s rms\n", o);
                     free(o);
                     break;
@@ -255,7 +255,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     c1 = getCapValueInFarads(buffer);
                     output = capacitiveReactance(f, c1);
-                    o = getRKMfromOhms(output);
+                    o = getValFromOhms(output);
                     printf("\nCapacitive reactance: %s", o);
                     free(o);
                     break;
@@ -267,7 +267,7 @@ void handleInput(char input){
                     scanf("%s", buffer);
                     l = getIndValueInHenries(buffer);
                     output = inductiveReactance(f, l);
-                    o = getRKMfromOhms(output);
+                    o = getValFromOhms(output);
                     printf("\nInductive reactance: %s", o);
                     free(o);
                     break;
