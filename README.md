@@ -42,3 +42,9 @@ The calculators are designed to parse RKM shorthand from user input such as **".
 To use this calculator for macOS, simply download the Mac executable in the macOS folder and run it. For Windows, download this project and build from the two source files **"main.c"** and **"emaths.h"**. An icon for the executable is included in the resources file. 
 
 The **emaths.h** function header file may also be used/tweaked to expand on this concept for other electronics applications. 
+
+## License
+
+This project is free to use, modify, copy, share, or whatever else you want to do with it under the terms of the MIT license. See "License" for details.
+
+Copyright (c) 2024 Maximilian Landau
