@@ -43,6 +43,4 @@ The application functions as a typical console app: options and prompts are prin
 
 The calculators are designed to parse RKM shorthand from user input such as **".2uF"** as **.0000002** or **"4k7"** as **4700** and inversely will abbreviate on output for ease of use and readability. It will convert decimals down to milli, micro, nano, or abbreviate large numbers up to kilo, mega, giga, depending on the unit.
 
-An icon for the executable is included in the resources file. 
-
 The **emaths.h** function header file may also be used/tweaked independently to expand on this concept for other electronics applications. 
