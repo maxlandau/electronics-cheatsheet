@@ -35,7 +35,7 @@ No GUI -- this is a classic console app.
 
 ## Use
 
-The executables for MacOS and Windows are in the respectively named folders. Simply download the one for your operating system and run it.
+The executables for MacOS and Windows are in their respectively named folders. Simply download the correct one for your operating system and run it.
 
 You can also download this project and build it yourself.
 
